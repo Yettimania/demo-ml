@@ -1,0 +1,25 @@
+virtual_env := ".venv"
+
+# Create python virtual_env
+venv:
+    python -m venv {{virtual_env}} 
+
+# Install python requirements
+install:
+    pip install -r requirements.txt
+
+# Test request, train the model
+train:
+    curl -X POST localhost:5000/train
+
+# Test request, predict a input dataset on the model
+predict:
+    curl -X GET localhost:5000/predict -d 'data=4.7,3.2,1.3,0.2'
+
+# Build the docker container
+build:
+    docker build -t ml-api .
+
+# Run the docker container on local machine
+deploy:
+    docker run --network host -it ml-api 
