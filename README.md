@@ -2,11 +2,11 @@
 
 Demo repo highlighting practices of DE/DS
 
-'infrastructure' - Terraform for managing MySQL instance.
+`infrastructure` - Terraform for managing MySQL instance.
 
-'etl' - Python script to extract, transform and load data into the MySQL database.
+`etl` - Python script to extract, transform and load data into the MySQL database.
 
-'api' - ML Model Deployment using the Iris dataset
+`api` - ML Model Deployment using the Iris dataset
 
 See the specific `README.md` within the respective directory.
 
