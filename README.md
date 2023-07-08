@@ -10,5 +10,5 @@ Demo repo highlighting practices of DE/DS
 
 These are the recommended prerequisites to work within the `demo-ml` monorepo.
 
-- `just` - Command line runner for project specific commands. One of my favorite tools. [just repo](https://github.com/casey/just)
+- `just` - (Suggested) Command line runner for project specific commands. One of my favorite tools. This is not required and if not installed, the equivalent cli commands can be found in the `justfile` [just repo](https://github.com/casey/just)
 - `terraform` - Manage DB through Infrastructure as Code

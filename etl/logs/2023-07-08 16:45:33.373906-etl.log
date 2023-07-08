@@ -1,0 +1,23 @@
+2023-07-08 09:45:33,374: main: data.csv: INFO: logger initiated
+2023-07-08 09:45:33,374: main: data.csv: INFO: logging file: 2023-07-08 16:45:33.373906-etl.log
+2023-07-08 09:45:33,374: main: data.csv: INFO: opening data.csv
+2023-07-08 09:45:33,375: main: data.csv: INFO: transformed records: 100
+2023-07-08 09:45:33,375: main: data.csv: INFO: transformed records: 200
+2023-07-08 09:45:33,376: main: data.csv: INFO: transformed records: 300
+2023-07-08 09:45:33,376: main: data.csv: INFO: transformed records: 400
+2023-07-08 09:45:33,376: main: data.csv: INFO: transformed records: 500
+2023-07-08 09:45:33,377: main: data.csv: INFO: transformed records: 600
+2023-07-08 09:45:33,377: main: data.csv: INFO: transformed records: 700
+2023-07-08 09:45:33,378: main: data.csv: INFO: transformed records: 800
+2023-07-08 09:45:33,378: main: data.csv: INFO: transformed records: 900
+2023-07-08 09:45:33,378: main: data.csv: INFO: transformed records: 1000
+2023-07-08 09:45:33,379: main: data.csv: INFO: closing data.csv
+2023-07-08 09:45:33,379: main: data.csv: INFO: inserting 1000 records
+2023-07-08 09:45:33,379: main: data.csv: INFO: start db load
+2023-07-08 09:45:33,383: main: data.csv: INFO: db connection established
+2023-07-08 09:45:33,383: main: data.csv: INFO: confirming/creating table
+2023-07-08 09:45:33,384: main: data.csv: INFO: loading data to db
+2023-07-08 09:45:33,444: main: data.csv: INFO: closing db connection
+2023-07-08 09:45:33,444: main: data.csv: INFO: db connection closed
+2023-07-08 09:45:33,444: main: data.csv: INFO: db load complete
+2023-07-08 09:45:33,445: main: data.csv: INFO: complete
