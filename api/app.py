@@ -6,8 +6,7 @@ from predict import model_predict
 
 app = Flask(__name__)
 
-# Load trained KNN model for iris dataset.
-model = joblib.load("model.joblib")
+# Return meaninful lables instead of index
 labels = ["setosa", "versicolor", "virginica"]
 
 
@@ -22,6 +21,8 @@ def train():
 # Returns model prediction
 @app.route("/predict", methods=["GET"])
 def predict():
+    # Load trained KNN model for iris dataset.
+    model = joblib.load("model.joblib")
     input = [float(d) for d in request.form.get("data").split(",")]
     index = model_predict(model, [input])[0]
     label = labels[index]
