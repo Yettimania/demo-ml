@@ -18,7 +18,7 @@ Run `just deploy` to run the container on the local machine.
 
 The API offers two endpoints.
 
-`/train` [POST] - This will train a KNearestNeighbors model on the Iris data set and dump the model locally.
+`/train` [POST] - This will train a KNearestNeighbors model on the Iris data set and dumps the model locally.
 
 `/predict` [GET] - The predict method requires a form-data body with `data` equal to 4 float values comma separated. This is representative of the model input features (i.e. `data=sepal_length,sepal_width,petal_length,petal_width`).
 
