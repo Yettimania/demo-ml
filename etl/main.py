@@ -71,8 +71,6 @@ def init_logger(file):
 def connect_db():
     """
     Creates connection to db based on credentials passed.
-    Args:
-        creds: dict - Credentials with host, db, user, pw
     Yields:
         connection: mysql.connect()
     """
@@ -102,7 +100,6 @@ def create_table_if_not_exist(cursor):
     SQL file is loaded from directory.
     Args:
         cursor: mysql.connection.cursor()
-        file: string - Path to sql query
     """
     logger.info("confirming/creating table")
     with open("./create_table.sql", "r") as f:
@@ -112,6 +109,8 @@ def create_table_if_not_exist(cursor):
 def extract(file):
     """
     Generator that reads CSV line into dataclass Record.
+    Args:
+        file: Name of CSV file
     Yields:
         record: Record - Record Data Class
     """
@@ -129,6 +128,8 @@ def extract(file):
 def transform(record):
     """
     Takes individual record and performs transforms for data enrichment.
+    Args:
+        record: Record Class
     Yields:
         tx_record: tuple - Packaged payload of enriched record ready for SQL load
     """
@@ -149,6 +150,9 @@ def transform(record):
 def load(payload, table):
     """
     Loads batched data into db table.
+    Args:
+        payload: List of record objects
+        table: Target table to insert in database
     """
     logger.info("start db load")
     stmt = (

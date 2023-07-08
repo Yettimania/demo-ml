@@ -18,11 +18,17 @@ Run `just deploy` to run the container on the local machine.
 
 The API offers two endpoints.
 
-`/train` - This will train a KNearestNeighbors model on the Iris data set and dump the model locally.
+`/train` [POST] - This will train a KNearestNeighbors model on the Iris data set and dump the model locally.
 
-`/predict` - The predict method expects a request body with `data` equal to a payload of 4 float values as the model input `data=<float, 4>`. The returned integer is the prediction of the flower.
+`/predict` [GET] - The predict method requires a form-data body with `data` equal to 4 float values comma separated. This is representative of the model input features (i.e. `data=sepal_length,sepal_width,petal_length,petal_width`).
 
-Convinently there is a `just train` and `just predict` which utilizes `curl` to test the deployed container.
+**Example curl Request**
+
+`curl -X GET localhost:5000/predict -d 'data=4.7,3.2,1.3,0.2'`
+
+The returned value is the prediction of the iris species.
+
+Conveniently there is a `just train` and `just predict` which utilizes `curl` to test the deployed container.
 
 ## References
 
